@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".QuizQuestionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="32dp"
+            android:id="@+id/question_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            tools:text="@string/question_placeholder" />
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/flag_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_flag_of_india"
+            android:contentDescription="@string/flag" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:max="10"
+                android:minHeight="10dp"
+                android:progress="1" />
+
+            <TextView
+                android:id="@+id/progress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="#7A8089"
+                android:textSize="15sp"
+                tools:text="@string/progress_text" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/option_one"
+            style="@style/optionsButtonStyle"
+            android:background="@drawable/buttonstyle"
+            tools:text="Argentina" />
+
+        <TextView
+            android:id="@+id/option_two"
+            style="@style/optionsButtonStyle"
+            android:background="@drawable/buttonstyle"
+            tools:text="Austria" />
+
+        <TextView
+            android:id="@+id/option_three"
+            style="@style/optionsButtonStyle"
+            android:background="@drawable/buttonstyle"
+            tools:text="Australia" />
+
+        <TextView
+            android:id="@+id/option_four"
+            style="@style/optionsButtonStyle"
+            android:background="@drawable/buttonstyle"
+            tools:text="India" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="10dp"
+            android:text="@string/submit"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</ScrollView>
